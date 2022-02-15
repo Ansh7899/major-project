@@ -1,22 +1,22 @@
-:root{
-    /* Color Theme Swatches in Hex */
---violet: #010326;
---black: #242426;
---yellow: #F2E205;
---golden: #8C8411; 
---white: #F2F2F2;
---inter: 'Inter', sans-serif;
+:root {
+  /* Color Theme Swatches in Hex */
+  --violet: #010326;
+  --black: #242426;
+  --yellow: #f2e205;
+  --golden: #8c8411;
+  --white: #f2f2f2;
+  --inter: "Inter", sans-serif;
 }
 
 html {
-    box-sizing: border-box;
-    color: var(--white);
+  box-sizing: border-box;
+  color: var(--white);
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 h1,
@@ -27,31 +27,36 @@ h4 {
 }
 
 body {
-    background-color: var(--violet);
-    font-family: var(--inter);
+  background-color: var(--violet);
+  font-family: var(--inter);
 }
 
 .headings {
-    text-align: center;
+  text-align: center;
 }
 
-.main{
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--black);
-    border-radius: 10px;
+.main {
+  height: 500px;
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  border-radius: 10px;
 }
 .main .left {
-    height: 300px;
-    width: 300px;
-    background-color: var(--white);
+  padding: 2rem;
+  background-color: var(--white);
 }
 
 .main .right {
-    height: 300px;
-    width: 300px;
-    background-color: var(--yellow);
+  height: 300px;
+  width: 300px;
+  background-color: var(--yellow);
 }
 
+@media (max-width: 600px) {
+  .main {
+    display: block;
+  }
+}
