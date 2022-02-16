@@ -45,14 +45,20 @@
             <div id="speechContainer">
                 <br>
                 <h3>Upload .wav file</h3> 
-                <form method="post" enctype="multipart/form-data">
+                <form action = "{{ url_for('recognize')}}" method="post" enctype="multipart/form-data">
                     <input type="file" name="file"/>
                     <br>
                     <br>
                     <h3>Recognize emotion from recording</h3> 
                     <input type="submit" id="submitButton" value="Recognize"/>
                 </form>
-        
+                {% if transcript != "" %}
+                <div id="speechEmotionContainer">
+                    <h1>Results</h1>
+                    <p id="emotionText">{{ transcript }}</p>
+                    <p id="emotionText1">{{ transcript1 }}</p>
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>

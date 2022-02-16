@@ -36,27 +36,34 @@ body {
 }
 
 .main {
-  height: 500px;
-  margin: 5rem 0;
+  padding: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   color: var(--black);
   border-radius: 10px;
 }
 .main .left {
   padding: 2rem;
+  width: 50%;
   background-color: var(--white);
 }
 
 .main .right {
-  height: 300px;
-  width: 300px;
+  padding: 2rem;
+  width: 50%;
   background-color: var(--yellow);
 }
 
 @media (max-width: 600px) {
   .main {
     display: block;
+  }
+  .main .left {
+    width: 100%;
+  }
+  .main .right {
+    width: 100%;
   }
 }
